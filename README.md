@@ -6,8 +6,9 @@ O caso de uso consiste em desenvolver um componente que lista e filtra cobrança
 
 ---
 
-**O componente _random-word_ exemplifica um cenário básico de integração**
-
+- **O componente _random-word_ exemplifica um cenário básico de integração**
+- Recomenda-se utilizar Node 18.
+  
 ### Critérios de aceite:
 
 - Os dados da listagem devem ser consultados do endpoint `/api/charges`.
