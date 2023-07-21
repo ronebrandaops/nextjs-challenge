@@ -1,38 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Documento de Requisitos - Caso de Uso: Avaliação de Candidato a Desenvolvedor React
 
-## Getting Started
+## Introdução
 
-First, run the development server:
+O caso de uso consiste em desenvolver um componente que lista e filtra cobranças geradas por um vendedor, utilizando os componentes da lib Chakra UI.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**O componente _random-word_ exemplifica um cenário básico de integração**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Critérios de aceite:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Os dados da listagem devem ser consultados do endpoint `/api/charges`.
+- O estado da aplicação deve ser gerenciado utilizando Redux e Redux-Thunk, levando em consideração, visualmente, os seguintes cenários:
+  - Carregando - estado em que a request está sendo executada;
+  - Sucesso - lista é renderizada;
+  - Erro - alerta de erro é exibido para o usuário ao ocorrer alguma falha na request;
+- Como usuário, é necessário que seja possível filtrar os itens da lista através de um campo digitável.
+  - A API aceita o Query Param `search` para retornar os itens filtrados.
+- O caso de uso deve ser testável, principalmente o componente principal.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Pontos a serem avaliados
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Qualidade do código
+- Testes unitários
+- Arquitetura
+- Abstração
