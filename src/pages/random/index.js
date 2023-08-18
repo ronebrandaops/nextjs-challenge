@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import RandomWordContainer from "../../components/random-word/container";
+import RandomWordContainer from "@/components/random-word/container";
 
 export default function Home() {
   return (
